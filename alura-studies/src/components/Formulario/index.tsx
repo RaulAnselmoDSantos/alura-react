@@ -11,10 +11,27 @@ class Formulario extends React.Component<{
     tempo  : "00:00"
   }
 
+  constructor(props: {
+    setTarefas: React.Dispatch<React.SetStateAction<Itarefa[]>>
+  }) {
+    super(props);
+ 
+    this.adicionarTarefa = this.adicionarTarefa.bind(this);
+  }
+
   adicionarTarefa(evento: React.FormEvent<HTMLFormElement>) {
     evento.preventDefault();
-    this.props.setTarefas(tarefasAntigas => [...tarefasAntigas, {...this.state}]);
-  }
+    if (this.props) {
+      this.props.setTarefas(tarefasAntigas => [...tarefasAntigas, {...this.state}]);
+      this.setState({
+        tarefa: "",
+        tempo: "00:00"
+      })
+    } else {
+      console.error('Props não definidos');
+    }
+   }
+   
 
   render() {
     return (
