@@ -8,7 +8,3 @@ export  function tempoParaSegundos(tempo: string) {
     const  tempoSaida = horasEmSegundos + minutosEmSegundos + Number(segundos) ;
     return tempoSaida;
 }
-
-export function segundosParaHoras(tempoSaida : string){
-    console.log(tempoSaida);
-}
