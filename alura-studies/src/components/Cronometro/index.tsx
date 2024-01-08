@@ -63,14 +63,9 @@ export default function Cronometro1({
         }}
       >
         Começar!
-      </Botao>
-      <Botao
-        onClick={() => {
+      </Botao> <Botao onClick={() => {
           pararCronometro(tempo);
-        }}
-      >
-        Parar!
-      </Botao>
+        }}>Parar!</Botao>
     </div>
   );
 }
