@@ -57,15 +57,22 @@ export default function Cronometro1({
       <div className={style.relogioWrapper}>
         <Relogio tempo={tempo} />
       </div>
-      <Botao
-        onClick={() => {
-          iniciarCronometro(tempo);
-        }}
-      >
-        Começar!
-      </Botao> <Botao onClick={() => {
-          pararCronometro(tempo);
-        }}>Parar!</Botao>
+      <div className={style.botoesWrapper }>
+        <Botao
+            onClick={() => {
+            iniciarCronometro(tempo);
+            }}
+        >
+            Começar!
+        </Botao>
+        
+        <Botao
+            onClick={() => {
+            pararCronometro(tempo);
+            }}
+        >Parar!
+        </Botao>
+    </div>
     </div>
   );
 }
