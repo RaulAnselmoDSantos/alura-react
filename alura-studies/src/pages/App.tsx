@@ -27,6 +27,7 @@ function App() {
             if(tarefa.id === selecionado.id) {
                 return {
                     ...tarefa,
+                    continua: undefined,
                     selecionado: false,
                     completado: true
                 }
@@ -45,6 +46,7 @@ function App() {
         selecionaTarefa = {selecionaTarefa}
       />
       <Cronometro 
+        continua={false}
         selecionado={selecionado} 
         finalizarTarefa={finalizarTarefa}
       />
