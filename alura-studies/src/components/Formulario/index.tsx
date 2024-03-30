@@ -15,6 +15,7 @@ function Formulario({ setTarefas }: Props) {
     evento.preventDefault();
     setTarefas(tarefasAntigas => 
       [
+        
         ...tarefasAntigas,
         {
           tarefa,
